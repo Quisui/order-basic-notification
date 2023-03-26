@@ -10,8 +10,8 @@ The listener is registered to listen to the OrderStatusUpdated event in the Even
 When the OrderStatusUpdated event is fired (usually through code that updates an order's status), the SendOrderStatusNotification listener is triggered and the notification is sent via a webhook.
 This implementation allows other developers to easily add new listeners for the OrderStatusUpdated event if they want to perform additional actions when an order status is updated, without having to modify the existing code.
 
-This method will make this listener available inside your app:
-src/ordernotificationprovider.php
+This method will make this listener available inside your app: <br> 
+[src/ordernotificationprovider.php](https://github.com/Quisui/order-basic-notification/blob/master/src/OrderNotificationProvider.php) <br>
 $this->app['events']->listen(
     'Quisui\OrderBasicNotification\Events\OrderStatusUpdated',
     'Quisui\OrderBasicNotification\Listeners\SendOrderStatusNotification'
