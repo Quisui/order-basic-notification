@@ -1,0 +1,28 @@
+{
+    "name": "quisui/order-basic-notification",
+    "description": "To ensure that we will not miss any sale and to keep track of the statuses of the orders a basic notification service needs to be created.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "quisui",
+            "email": "quiqueal.17@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Quisui\\OrderBasicNotification\\": "src/"
+        },
+        "files": [
+            "src/NotificationOrderStatusUpdater.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Quisui\\OrderBasicNotification\\OrderNotificationProvider"
+            ]
+        }
+    },
+    "require": {}
+}
