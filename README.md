@@ -3,12 +3,12 @@ Buckhill Challenge create a package for notifications - NotificationOrderStatusU
 ### To ensure that we will not miss any sale and to keep track of the statuses of the orders a basic notification service needs to be created.
 
 # Information
-The Observer pattern is implemented through events and listeners.
-The package defines an event class called OrderStatusUpdated, which contains the data that will be passed to the listeners.
-The package also defines a listener class called SendOrderStatusNotification, which is responsible for sending a notification to a webhook when an order status is updated.
-The listener is registered to listen to the OrderStatusUpdated event in the EventServiceProvider class.
-When the OrderStatusUpdated event is fired (usually through code that updates an order's status), the SendOrderStatusNotification listener is triggered and the notification is sent via a webhook.
-This implementation allows other developers to easily add new listeners for the OrderStatusUpdated event if they want to perform additional actions when an order status is updated, without having to modify the existing code.
+The Observer pattern is implemented through events and listeners. <br>
+The package defines an event class called OrderStatusUpdated, which contains the data that will be passed to the listeners.<br>
+The package also defines a listener class called SendOrderStatusNotification, which is responsible for sending a notification to a webhook when an order status is updated. <br>
+The listener is registered to listen to the OrderStatusUpdated event in the EventServiceProvider class. <br>
+When the OrderStatusUpdated event is fired (usually through code that updates an order's status), the SendOrderStatusNotification listener is triggered and the notification is sent via a webhook. <br>
+This implementation allows other developers to easily add new listeners for the OrderStatusUpdated event if they want to perform additional actions when an order status is updated, without having to modify the existing code. <br>
 
 This method will make this listener available inside your app: <br> 
 [src/ordernotificationprovider.php](https://github.com/Quisui/order-basic-notification/blob/master/src/OrderNotificationProvider.php) <br>
